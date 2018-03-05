@@ -53,7 +53,7 @@ void Listele( Kuyruk *yeni ){
 	}
 }
 
-int main(){  // KODU DUZELT B� ZAHMET :)
+int main(){  // KODUN ÇALIŞMASI İÇİN DUZELTİN BİR ZAHMET :)
 	enqueu(1);
 	enqueu(2);
 	enqueu(3);
