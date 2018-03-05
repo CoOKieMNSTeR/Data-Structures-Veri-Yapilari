@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>              //Muhammed Said BAKIRCI
-#include<stdlib.h>					//16010011029
+#include<stdlib.h>					
 #define  STACKSIZE  50
 
 struct  stack
@@ -28,8 +28,8 @@ void  main()
     getch() ;
 }
 
-/* Bu iþleve sonuçta gelen son deyim cik'de depolanacaktýr */
-/* yani - giriþ ifadesi,cik - çýktý ifadesi */
+/* Bu iÃ¾leve sonuÃ§ta gelen son deyim cik'de depolanacaktÃ½r */
+/* yani - giriÃ¾ ifadesi,cik - Ã§Ã½ktÃ½ ifadesi */
 void  postfix(char  gir[ ], char  cik[ ])
 {
     int  i, j ;
@@ -71,7 +71,7 @@ void  postfix(char  gir[ ], char  cik[ ])
     cik[j]='\0' ;
 }
 
-/* Belirtilen karakter bir iþlenen ise bu iþlev true deðerini döndürür */
+/* Belirtilen karakter bir iÃ¾lenen ise bu iÃ¾lev true deÃ°erini dÃ¶ndÃ¼rÃ¼r */
 int  isoperand(char  c)
 {
     if(c>='A'&&c<='Z'||c>='a'&&c<='z'||c>='0'&&c<='9')
@@ -81,10 +81,10 @@ int  isoperand(char  c)
 }
 
 /*
-prcd (secim, car) true döndüren bir iþlevdir
-1) car'nin car'den yüksek önceliði varsa
-2) öncelikler ayný ise, atýlganlýk düþünülür
-   Dolayýsýyla prcd (*, +) = 1, prcd (+, +) = prcd (+, -) = ... = 1
+prcd (secim, car) true dÃ¶ndÃ¼ren bir iÃ¾levdir
+1) car'nin car'den yÃ¼ksek Ã¶nceliÃ°i varsa
+2) Ã¶ncelikler aynÃ½ ise, atÃ½lganlÃ½k dÃ¼Ã¾Ã¼nÃ¼lÃ¼r
+   DolayÃ½sÃ½yla prcd (*, +) = 1, prcd (+, +) = prcd (+, -) = ... = 1
 prcd (+, *) = 0 prcd ($, $) = 0
 */
 
@@ -106,7 +106,7 @@ int  prcd(char  secim, char  car)
         case '(':
             return  0 ;
         default:
-            printf("\nHatalý Çalýþma.") ;
+            printf("\nHatalÃ½ Ã‡alÃ½Ã¾ma.") ;
             getch() ;
             exit(1) ;
         }
