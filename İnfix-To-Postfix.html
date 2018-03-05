@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>16010011029-M.Said BAKIRCI</title>
+<style type="text/css">
+.header{font-family:verdana,arial,helvetica; font-weight:bold; font-size:22pt; color:#003399; filter:DropShadow(color=#DDDDFF, offX=2, offY=2, positive=1); width:100%}
+.form_in{background:#FCFCFF; border:#003399 solid 1px}
+.text_box{font-weight:bold; background:#EFEFFF; border:#003399 solid 1px; height:20px}
+.button{background:#DDDDEE; font-weight:bold; color:#003399;  width:100%; height:22px; cursor:hand}
+.link{color:#003399}
+.link:hover{color:#0033FF}
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+
+
+
+<!--BASLANGIC INFIX-POSTFIX JAVASCRIPT-->
+<script language="JavaScript">
+/*
+  Infix <-> Postfix Conversion
+ 
+*/
+
+function push_stack(stackArr,ele)
+{
+ stackArr[stackArr.length]=ele;
+}
+
+function pop_stack(stackArr)
+{
+ var _temp=stackArr[stackArr.length-1];
+ delete stackArr[stackArr.length-1];
+ stackArr.length--;
+ return(_temp);
+}
+
+function isOperand(who)
+{
+ return(!isOperator(who)? true : false);
+}
+
+function isOperator(who)
+{
+ return((who=="+" || who=="-" || who=="*" || who=="/" || who=="(" || who==")")? true : false);
+}
+
+function topStack(stackArr)
+{
+ return(stackArr[stackArr.length-1]);
+}
+
+function isEmpty(stackArr)
+{
+ return((stackArr.length==0)? true : false);
+}
+
+/*Öncelik Kontrolü */
+function prcd(char1,char2)
+{
+ var char1_index,char2_index;
+ var _def_prcd="-+*/";
+ for(var i=0; i<_def_prcd.length; i++)
+ {
+  if(char1==_def_prcd.charAt(i)) char1_index=i;
+  if(char2==_def_prcd.charAt(i)) char2_index=i;
+ }
+ if(((char1_index==0)||(char1_index==1)) && (char2_index>1)) return false;
+ else return true;
+}
+
+function InfixToPostfix(infixStr,postfixStr)
+{
+ var postfixStr=new Array();
+ var stackArr=new Array();
+ var postfixPtr=0;
+ infixStr=infixStr.split('');
+ for(var i=0; i<infixStr.length; i++)
+ {
+  if(isOperand(infixStr[i]))
+  {
+   postfixStr[postfixPtr]=infixStr[i];
+   postfixPtr++;
+  }
+  else
+  {
+   while((!isEmpty(stackArr)) && (prcd(topStack(stackArr),infixStr[i])))
+   {
+    postfixStr[postfixPtr]=topStack(stackArr);
+    pop_stack(stackArr);
+    postfixPtr++;
+   }
+   if((!isEmpty(stackArr)) && (infixStr[i]==")"))
+   {
+    pop_stack(stackArr);
+   }
+   else
+   {
+    push_stack(stackArr,infixStr[i]);
+   }
+  }
+ }
+ while(!isEmpty(stackArr))
+ {
+  postfixStr[postfixStr.length]=topStack(stackArr);
+  pop_stack(stackArr);
+ }
+ var returnVal='';
+ for(var i=0; i<postfixStr.length; i++)
+ {
+  returnVal+=postfixStr[i];
+ }
+ return(returnVal);
+}
+
+function PostfixToInfix(postfixStr)
+{
+ var stackArr=new Array();
+ postfixStr=postfixStr.split('');
+ for(var i=0; i<postfixStr.length; i++)
+ {
+  if(isOperand(postfixStr[i]))
+  {
+   push_stack(stackArr,postfixStr[i]);
+  }
+  else
+  {
+   var temp=topStack(stackArr);
+   pop_stack(stackArr);
+   var pushVal=topStack(stackArr)+postfixStr[i]+temp;
+   pop_stack(stackArr);
+   push_stack(stackArr,pushVal);
+  }
+ }
+ return(topStack(stackArr));
+}
+
+function PostfixSubEval(num1,num2,sym)
+{
+ var returnVal;
+ if(sym=="+")
+  returnVal=num1+num2;
+ if(sym=="-")
+  returnVal=num1-num2;
+ if(sym=="*")
+  returnVal=num1*num2;
+ if(sym=="/")
+  returnVal=num1/num2;
+ return(returnVal);
+}
+
+function PostfixEval(postfixStr)
+{
+ var stackArr=new Array();
+ postfixStr=postfixStr.split('');
+ for(var i=0; i<postfixStr.length; i++)
+ {
+  if(isOperand(postfixStr[i]))
+  {
+   push_stack(stackArr,postfixStr[i]);
+  }
+  else
+  {
+   var temp=parseFloat(topStack(stackArr));
+   pop_stack(stackArr);
+   var pushVal=PostfixSubEval(parseFloat(topStack(stackArr)),temp,postfixStr[i]);
+   pop_stack(stackArr);
+   push_stack(stackArr,pushVal);
+  }
+ }
+ return(topStack(stackArr));
+}
+var draw = false;
+
+
+</script>
+<!--END INFIX-POSTFIX JAVASCRIPT-->
+
+
+<center><span class="header">Infix &lt;&gt; Postfix</span></center>
+
+<!--BEGIN FORM-->
+<center>
+<form name="input_form">
+<table class="form_in" cellspacing="0" cellpadding="3">
+ <tr bgcolor="#003399">
+  <td><font face="verdana,arial,helvetica" size="-2" color="#FFFFFF">Infix Ifade :</font></td>
+  <td><font face="verdana,arial,helvetica" size="-2" color="#FFFFFF">Postfix Ifade :</font></td>
+  <td><font face="verdana,arial,helvetica" size="-2" color="#FFFFFF">Sonuc (Postfix Sonuc) :</font></td>
+ </tr>
+ <tr>
+  <td><input type="text" name="infixVal" class="text_box" value=""></td>
+  <td><input type="text" name="postfixVal" class="text_box" value=""></td>
+  <td><input type="text" name="resultVal" class="text_box" value=""></td>
+ </tr>
+ <tr>
+  <td><input type="button" onClick="document.input_form.postfixVal.value=InfixToPostfix(document.input_form.infixVal.value,'arr');document.input_form.resultVal.value=PostfixEval(document.input_form.postfixVal.value)" value="Infix to Postfix >>>" class="button"></td>
+  <td><input type="button" onClick="document.input_form.infixVal.value=PostfixToInfix(document.input_form.postfixVal.value);document.input_form.resultVal.value=PostfixEval(document.input_form.postfixVal.value)" value="<<< Postfix to Infix" class="button"></td>
+ </tr>
+</table>
+</form>
+</center>
+<!--END FORM-->
+
+
+
+
+</body>
+</html>
