@@ -4,7 +4,7 @@
 /* 
 	Dairesel Bagli Listeden Olusturulan
 	
-	ODEV : Bunun Pointerli Halini Yap
+	
 */
 
 #define Kboyut 5
