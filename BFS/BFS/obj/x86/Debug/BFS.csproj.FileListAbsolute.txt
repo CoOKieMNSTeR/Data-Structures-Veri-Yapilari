@@ -1,0 +1,33 @@
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\bin\Debug\BFS.exe
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\bin\Debug\BFS.pdb
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\BFS.Form1.resources
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\BFS.Properties.Resources.resources
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\BFS.exe
+c:\users\ferid\documents\visual studio 2010\Projects\BFS\BFS\obj\x86\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\bin\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\bin\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.csprojResolveAssemblyReference.cache
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.Form1.resources
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.Properties.Resources.resources
+C:\Users\MuhammedSaid\Desktop\BFS-Ferid-Movsumov\BFS\obj\x86\Debug\BFS.csproj.GenerateResource.Cache
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\bin\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\bin\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.csprojResolveAssemblyReference.cache
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.Form1.resources
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.Properties.Resources.resources
+C:\Users\MuhammedSaid\Desktop\BFS\BFS\obj\x86\Debug\BFS.csproj.GenerateResource.Cache
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\bin\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\bin\Debug\BFS.pdb
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.csprojResolveAssemblyReference.cache
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.Form1.resources
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.Properties.Resources.resources
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.csproj.GenerateResource.Cache
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.exe
+C:\Users\MuhammedSaid\Desktop\ÖDEVLER\Ödev7\BFS\BFS\obj\x86\Debug\BFS.pdb
